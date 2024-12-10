@@ -87,6 +87,7 @@ module Debugbar
 
     def response_hash
       return nil if response.nil?
+      return nil unless response&.body
 
       {
         status: response.status,
